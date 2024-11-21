@@ -8,33 +8,37 @@ class CarnerPage extends StatefulWidget {
 }
 
 class _CarnerPageState extends State<CarnerPage> {
-  List<IconData> listIcons  = [
-      Icons.medical_services,
-      Icons.science,
-      Icons.camera_alt,
-      Icons.medication,
-      Icons.vaccines,
-      Icons.attach_money,
-    ];
+  final List<Map<String, dynamic>> items = [
+    {'icon': Icons.medical_services, 'label': 'Consultation'},
+    {'icon': Icons.science, 'label': 'Laboratoire'},
+    {'icon': Icons.camera_alt, 'label': 'Radiologie'},
+    {'icon': Icons.medication, 'label': 'Ordonnances'},
+    {'icon': Icons.vaccines, 'label': 'Immunisation'},
+    {'icon': Icons.attach_money, 'label': 'Factures'},
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: Text("Dossier"),
+        title: const Text("Dossier"),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: GridView.builder(
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2, // Deux colonnes par ligne
             crossAxisSpacing: 10, // Espacement horizontal
             mainAxisSpacing: 10, // Espacement vertical
           ),
-          itemCount: listIcons.length, // Nombre d'éléments
+          itemCount: items.length,
           itemBuilder: (context, index) {
-            return CardCustom(listIcon: listIcons[index]);
+            final item = items[index];
+            return CardCustom(
+              icon: item['icon'],
+              label: item['label'],
+            );
           },
         ),
       ),
@@ -43,32 +47,41 @@ class _CarnerPageState extends State<CarnerPage> {
 }
 
 class CardCustom extends StatelessWidget {
-  final IconData listIcon;
-  const CardCustom({super.key, required this.listIcon});
+  final IconData icon;
+  final String label;
+
+  const CardCustom({super.key, required this.icon, required this.label});
 
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation: 4, // Ombre pour chaque élément
+      elevation: 4,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(12),
       ),
-      child: Center(
-        child: Container(
-          height: 100,
-          width: 100,
-          decoration: BoxDecoration(
-            color: Colors.green,
-            borderRadius: BorderRadius.circular(50),
-          ),
-          child: Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Container(
+            height: 100,
+            width: 100,
+            decoration: BoxDecoration(
+              color: Colors.teal,
+              borderRadius: BorderRadius.circular(70),
+            ),
             child: Icon(
-              listIcon, // Utilisation de l'icône de la liste
+              icon,
               size: 50,
               color: Colors.white,
             ),
           ),
-        ),
+          const SizedBox(height: 10),
+          Text(
+            label,
+            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+            textAlign: TextAlign.center,
+          ),
+        ],
       ),
     );
   }
