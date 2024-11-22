@@ -2,9 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:medical/Screens/Widgets/profile_list.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Profile_screen extends StatelessWidget {
   const Profile_screen({super.key});
+
+  // Fonction pour lancer l'appel
+  Future<void> _callNumber(String phoneNumber) async {
+    final Uri phoneUri = Uri(scheme: 'tel', path: phoneNumber);
+    if (await canLaunchUrl(phoneUri)) {
+      await launchUrl(phoneUri);
+    } else {
+      // Affiche un message d'erreur si l'appel ne peut pas être lancé
+      throw 'Impossible d\'ouvrir l\'application téléphonique';
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -46,11 +58,13 @@ class Profile_screen extends StatelessWidget {
                       height: 30,
                       width: 30,
                       decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          border: Border.all(width: 1, color: Colors.white),
-                          color: Colors.white,
-                          image: DecorationImage(
-                              image: AssetImage("lib/icons/camra.png"))),
+                        shape: BoxShape.circle,
+                        border: Border.all(width: 1, color: Colors.white),
+                        color: Colors.white,
+                        image: DecorationImage(
+                          image: AssetImage("lib/icons/camra.png"),
+                        ),
+                      ),
                     ),
                   ),
                 ],
@@ -199,52 +213,99 @@ class Profile_screen extends StatelessWidget {
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(30),
                       topRight: Radius.circular(30))),
-              child: Column(children: [
-                SizedBox(
-                  height: 50,
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    SizedBox(
+                      height: 50,
+                    ),
+                    profile_list(
+                      image: "lib/icons/heart2.png",
+                      title: "My Saved",
+                      color: Colors.black87,
+                      action: () {},
+                    ),
+                    const Padding(
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 25, vertical: 10),
+                      child: Divider(),
+                    ),
+                    profile_list(
+                      image: "lib/icons/appoint.png",
+                      title: "Appointmnet",
+                      color: Colors.black87,
+                      action: () {},
+                    ),
+                    const Padding(
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 25, vertical: 10),
+                      child: Divider(),
+                    ),
+                    profile_list(
+                      image: "lib/icons/Chat.png",
+                      title: "SAMU",
+                      color: Colors.black87,
+                      action: () => _callNumber("1234"),
+                    ),
+                    const Padding(
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 25, vertical: 10),
+                      child: Divider(),
+                    ),
+                    profile_list(
+                      image: "lib/icons/Chat.png",
+                      title: "POLICE",
+                      color: Colors.black87,
+                      action: () => _callNumber("1234"),
+                    ),
+                    const Padding(
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 25, vertical: 10),
+                      child: Divider(),
+                    ),
+                    profile_list(
+                      image: "lib/icons/Chat.png",
+                      title: "SAPPEUR PONPIER",
+                      color: Colors.black87,
+                      action: () => _callNumber("1234"),
+                    ),
+                    const Padding(
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 25, vertical: 10),
+                      child: Divider(),
+                    ),
+                    profile_list(
+                      image: "lib/icons/Chat.png",
+                      title: "FAQs",
+                      color: Colors.black87,
+                      action: () {},
+                    ),
+                    const Padding(
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 25, vertical: 10),
+                      child: Divider(),
+                    ),
+                    profile_list(
+                      image: "lib/icons/pay.png",
+                      title: "Payment Method",
+                      color: Colors.black87,
+                      action: () {},
+                    ),
+                    const Padding(
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 25, vertical: 10),
+                      child: Divider(),
+                    ),
+                    profile_list(
+                      image: "lib/icons/logout.png",
+                      title: "Log out",
+                      color: Colors.red,
+                      action: () {},
+                    ),
+                    SizedBox(height: 120,),
+                  ],
                 ),
-                profile_list(
-                  image: "lib/icons/heart2.png",
-                  title: "My Saved",
-                  color: Colors.black87,
-                ),
-                const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 25, vertical: 10),
-                  child: Divider(),
-                ),
-                profile_list(
-                  image: "lib/icons/appoint.png",
-                  title: "Appointmnet",
-                  color: Colors.black87,
-                ),
-                const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 25, vertical: 10),
-                  child: Divider(),
-                ),
-                profile_list(
-                  image: "lib/icons/chat.png",
-                  title: "FAQs",
-                  color: Colors.black87,
-                ),
-                const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 25, vertical: 10),
-                  child: Divider(),
-                ),
-                profile_list(
-                  image: "lib/icons/pay.png",
-                  title: "Payment Method",
-                  color: Colors.black87,
-                ),
-                const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 25, vertical: 10),
-                  child: Divider(),
-                ),
-                profile_list(
-                  image: "lib/icons/logout.png",
-                  title: "Log out",
-                  color: Colors.red,
-                ),
-              ]),
+              ),
             ),
           ],
         ),

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:medical/Screens/Views/chat_ia_page.dart';
+import 'package:medical/Screens/Views/consutation_list.dart';
 import 'package:medical/Screens/Views/doctor_details_screen.dart';
 import 'package:medical/Screens/Views/doctor_search.dart';
 import 'package:medical/Screens/Views/find_doctor.dart';
@@ -67,10 +69,12 @@ class Dashboard extends StatelessWidget {
               child: TextField(
                 onTap: () {
                   Navigator.push(
-                      context,
-                      PageTransition(
-                          type: PageTransitionType.rightToLeft,
-                          child: find_doctor()));
+                    context,
+                    PageTransition(
+                      type: PageTransitionType.rightToLeft,
+                      child: find_doctor(),
+                    ),
+                  );
                 },
                 textAlign: TextAlign.start,
                 textInputAction: TextInputAction.none,
@@ -124,7 +128,36 @@ class Dashboard extends StatelessWidget {
           SizedBox(
             height: 10,
           ),
-          const banner(),
+          BannerWidget(
+            title: "Early protection for\nyour family health",
+            image: "lib/icons/female.png",
+            textButton: "Discuter avec l'IA",
+            buttonLink: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ChatIAPage(),
+                ),
+              );
+            },
+          ),
+          SizedBox(
+            height: 10,
+          ),
+
+          BannerWidget(
+            title: "Early protection for\nyour family health",
+            image: "lib/icons/female.png",
+            textButton: "Consultation",
+            buttonLink: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ConsutationList(),
+                ),
+              );
+            },
+          ),
           // Banner Design
           const SizedBox(
             height: 20,
