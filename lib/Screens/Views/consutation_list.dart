@@ -6,12 +6,12 @@ class ConsutationList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final List<Map<String, dynamic>> services = [
-      {"title": "Generalist", "price": 6000.0},
-      {"title": "Nutritionist", "price": 6000.0},
-      {"title": "Gynecologist", "price": 6000.0},
-      {"title": "Endocrinologist", "price": 10000.0},
-      {"title": "Dermo-cosmetic", "price": 15000.0},
-      {"title": "Herborist", "price": 25000.0},
+      {"title": "Généraliste", "price": 6000.0},
+      {"title": "Nutritionniste", "price": 6000.0},
+      {"title": "Gynécologue", "price": 6000.0},
+      {"title": "Endocrinologue", "price": 10000.0},
+      {"title": "Dermo-cosmétique", "price": 15000.0},
+      {"title": "Herboriste", "price": 25000.0},
     ];
 
     return Scaffold(

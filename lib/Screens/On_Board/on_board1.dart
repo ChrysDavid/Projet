@@ -48,7 +48,7 @@ class on_board1 extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(25),
                   child: Text(
-                    "Consult only with a doctor\nyou trust",
+                    "Consultez uniquement un médecin\nen qui vous avez confiance",
                     style: GoogleFonts.inter(
                         fontSize: 18.sp,
                         fontWeight: FontWeight.bold,

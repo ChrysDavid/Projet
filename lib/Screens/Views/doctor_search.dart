@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:medical/Screens/Login-Signup/login_signup.dart';
-import 'package:medical/Screens/Views/Dashboard_screen.dart';
 import 'package:medical/Screens/Views/Homepage.dart';
 import 'package:medical/Screens/Views/doctor_details_screen.dart';
 import 'package:medical/Screens/Widgets/doctorList.dart';
@@ -33,7 +31,7 @@ class doctor_search extends StatelessWidget {
           ),
         ),
         title: Text(
-          "Top Doctors",
+          "Meilleurs Médecins",
           style: GoogleFonts.poppins(color: Colors.black, fontSize: 18.sp),
         ),
         centerTitle: true,
@@ -66,36 +64,36 @@ class doctor_search extends StatelessWidget {
                       child: DoctorDetails()));
             },
             child: doctorList(
-                distance: "800m Away",
+                distance: "800m de distance",
                 image: "lib/icons/male-doctor.png",
                 maintext: "Dr. Marcus Horizon",
                 numRating: "4.7",
-                subtext: "Chardiologist"),
+                subtext: "Cardiologue"),
           ),
           doctorList(
-              distance: "800m Away",
+              distance: "800m de distance",
               image: "lib/icons/docto3.png",
               maintext: "Dr. Marcus Horizon",
               numRating: "4.7",
-              subtext: "Chardiologist"),
+              subtext: "Cardiologue"),
           doctorList(
-              distance: "800m Away",
+              distance: "800m de distance",
               image: "lib/icons/doctor2.png",
               maintext: "Dr. Marcus Horizon",
               numRating: "4.7",
-              subtext: "Chardiologist"),
+              subtext: "Cardiologue"),
           doctorList(
-              distance: "800m Away",
+              distance: "800m de distance",
               image: "lib/icons/black-doctor.png",
               maintext: "Dr. Marcus Horizon",
               numRating: "4.7",
-              subtext: "Chardiologist"),
+              subtext: "Cardiologue"),
           doctorList(
-              distance: "800m Away",
+              distance: "800m de distance",
               image: "lib/icons/male-doctor.png",
               maintext: "Dr. Marcus Horizon",
               numRating: "4.7",
-              subtext: "Chardiologist"),
+              subtext: "Cardiologue"),
         ],
       )),
     );

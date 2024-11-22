@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:medical/Screens/Views/Homepage.dart';
-import 'package:medical/Screens/Views/appointment.dart';
 import 'package:medical/Screens/Views/doctor_details_screen.dart';
 import 'package:medical/Screens/Widgets/doctorList.dart';
 import 'package:medical/Screens/Widgets/listicons.dart';
@@ -28,7 +26,7 @@ class find_doctor extends StatelessWidget {
         title: Column(
           children: [
             Text(
-              "Find Doctor",
+              "Rechercher un médecin",
               style: GoogleFonts.inter(
                   color: Color.fromARGB(255, 51, 47, 47),
                   fontSize: 20.sp,
@@ -76,7 +74,7 @@ class find_doctor extends StatelessWidget {
                     ),
                   ),
                   prefixIconColor: const Color.fromARGB(255, 3, 190, 150),
-                  label: Text("Search doctor, drugs, articles..."),
+                  label: Text("Recherchez un médecin, médicaments, articles..."),
                   floatingLabelBehavior: FloatingLabelBehavior.never,
                   border: OutlineInputBorder(
                     borderSide: BorderSide.none,
@@ -95,7 +93,7 @@ class find_doctor extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25),
                 child: Text(
-                  "Top Doctor",
+                  "Meilleurs médecins",
                   style: GoogleFonts.inter(
                     fontSize: 16.sp,
                     fontWeight: FontWeight.w700,
@@ -113,10 +111,10 @@ class find_doctor extends StatelessWidget {
               const SizedBox(
                 width: 10,
               ),
-              listIcons(Icon: "lib/icons/Doctor.png", text: "General"),
-              listIcons(Icon: "lib/icons/Lungs.png", text: "Lungs Prob"),
-              listIcons(Icon: "lib/icons/Dentist.png", text: "General"),
-              listIcons(Icon: "lib/icons/psychology.png", text: "Psychiatrist")
+              listIcons(Icon: "lib/icons/Doctor.png", text: "Généraliste"),
+              listIcons(Icon: "lib/icons/Lungs.png", text: "Problèmes pulmonaires"),
+              listIcons(Icon: "lib/icons/Dentist.png", text: "Dentiste"),
+              listIcons(Icon: "lib/icons/psychology.png", text: "Psychiatre")
             ],
           ),
           Row(
@@ -124,9 +122,9 @@ class find_doctor extends StatelessWidget {
               const SizedBox(
                 width: 10,
               ),
-              listIcons(Icon: "lib/icons/covid.png", text: "General"),
-              listIcons(Icon: "lib/icons/injection.png", text: "Lungs Prob"),
-              listIcons(Icon: "lib/icons/cardiologist.png", text: "General"),
+              listIcons(Icon: "lib/icons/covid.png", text: "Covid"),
+              listIcons(Icon: "lib/icons/injection.png", text: "Vaccins"),
+              listIcons(Icon: "lib/icons/cardiologist.png", text: "Cardiologue"),
             ],
           ),
           const SizedBox(
@@ -138,7 +136,7 @@ class find_doctor extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25),
                 child: Text(
-                  "Recommended Doctors",
+                  "Médecins recommandés",
                   style: GoogleFonts.inter(
                     fontSize: 16.sp,
                     fontWeight: FontWeight.w700,
@@ -160,11 +158,11 @@ class find_doctor extends StatelessWidget {
                       child: DoctorDetails()));
             },
             child: doctorList(
-                distance: "800m away",
+                distance: "800m de distance",
                 image: "lib/icons/male-doctor.png",
                 maintext: "Dr. Marcus Horizon",
                 numRating: "4.7",
-                subtext: "Chardiologist"),
+                subtext: "Cardiologue"),
           ),
           const SizedBox(
             height: 20,
@@ -175,7 +173,7 @@ class find_doctor extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25),
                 child: Text(
-                  "Your Recent Doctors",
+                  "Vos médecins récents",
                   style: GoogleFonts.inter(
                     fontSize: 16.sp,
                     fontWeight: FontWeight.w700,

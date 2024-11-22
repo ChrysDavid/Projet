@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:medical/Screens/Widgets/shedule_card.dart';
-import 'package:responsive_sizer/responsive_sizer.dart';
 
 class shedule_tab1 extends StatelessWidget {
   const shedule_tab1({super.key});
@@ -14,25 +12,25 @@ class shedule_tab1 extends StatelessWidget {
         const SizedBox(
           height: 30,
         ),
-        shedule_card(
-          confirmation: "Confirmed",
-          mainText: "Dr. Marcus Horizon",
-          subText: "Chardiologist",
-          date: "26/06/2022",
-          time: "10:30 AM",
-          image: "lib/icons/male-doctor.png",
-        ),
-        const SizedBox(
-          height: 20,
-        ),
-        shedule_card(
-          confirmation: "Confirmed",
-          mainText: "Dr. Marcus Horizon",
-          subText: "Chardiologist",
-          date: "26/06/2022",
-          time: "2:00 PM",
-          image: "lib/icons/female-doctor2.png",
-        )
+         shedule_card(
+            confirmation: "Confirmé",
+            mainText: "Dr Marcus Horizon",
+            subText: "Cardiologue",
+            date: "26/06/2022",
+            time: "10h30",
+            image: "lib/icons/male-doctor.png",
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          shedule_card(
+            confirmation: "Confirmé",
+            mainText: "Dr Marcus Horizon",
+            subText: "Cardiologue",
+            date: "26/06/2022",
+            time: "14h00",
+            image: "lib/icons/female-doctor2.png",
+          ),
       ]),
     );
   }

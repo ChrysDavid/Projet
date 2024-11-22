@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:medical/Screens/Views/constutation.dart';
-import 'package:medical/Screens/Views/consutation_list.dart';
 
 class CarnerPage extends StatefulWidget {
   const CarnerPage({super.key});

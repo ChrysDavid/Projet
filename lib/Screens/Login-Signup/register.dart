@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:medical/Screens/Login-Signup/login.dart';
-import 'package:medical/Screens/Login-Signup/login_signup.dart';
 import 'package:medical/Screens/Views/Homepage.dart';
 import 'package:medical/Screens/Widgets/Auth_text_field.dart';
 import 'package:page_transition/page_transition.dart';
@@ -30,7 +28,7 @@ class register extends StatelessWidget {
           },
         ),
         title: Text(
-          "Sign up",
+          "S'inscrire",
           style: GoogleFonts.inter(
               color: Colors.black87,
               fontSize: 22.sp,
@@ -71,7 +69,7 @@ class register extends StatelessWidget {
                     ),
                     prefixIconColor: const Color.fromARGB(255, 3, 190, 150),
                     label: Text(
-                      "Enter your email",
+                      "Entrez votre e-mail",
                       style: GoogleFonts.poppins(fontSize: 15.sp),
                     ),
                     floatingLabelBehavior: FloatingLabelBehavior.never,
@@ -85,12 +83,13 @@ class register extends StatelessWidget {
           const SizedBox(
             height: 5,
           ),
-          Auth_text_field(text: "Enter your name", icon: "lib/icons/email.png"),
+          Auth_text_field(
+              text: "Entrez votre nom", icon: "lib/icons/email.png"),
           const SizedBox(
             height: 5,
           ),
           Auth_text_field(
-              text: "Enter your password", icon: "lib/icons/lock.png"),
+              text: "Entrez votre mot de passe", icon: "lib/icons/lock.png"),
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
@@ -99,7 +98,7 @@ class register extends StatelessWidget {
                 onChanged: (bool? value) {},
               ),
               Text(
-                "I agree to the terms and conditions",
+                "J'accepte les termes et conditions",
                 style: GoogleFonts.poppins(
                   fontSize: 14.sp,
                   color: Colors.black87,
@@ -116,10 +115,12 @@ class register extends StatelessWidget {
             child: ElevatedButton(
               onPressed: () {
                 Navigator.push(
-                      context,
-                      PageTransition(
-                          type: PageTransitionType.rightToLeft,
-                          child: Homepage(),),);
+                  context,
+                  PageTransition(
+                    type: PageTransitionType.rightToLeft,
+                    child: Homepage(),
+                  ),
+                );
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Color.fromARGB(255, 3, 190, 150),
@@ -128,7 +129,7 @@ class register extends StatelessWidget {
                 ),
               ),
               child: Text(
-                "Create account",
+                "Créer un compte",
                 textAlign: TextAlign.center,
                 style: GoogleFonts.poppins(
                   fontSize: 18.sp,
@@ -146,9 +147,9 @@ class register extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                "Already have an account? ",
-                style:
-                    GoogleFonts.poppins(fontSize: 14.sp, color: Colors.black87),
+                "Vous avez déjà un compte? ",
+                style: GoogleFonts.poppins(
+                    fontSize: 14.sp, color: Colors.black87),
               ),
               GestureDetector(
                 onTap: () {
@@ -159,7 +160,7 @@ class register extends StatelessWidget {
                           child: login()));
                 },
                 child: Text(
-                  "Sign in",
+                  "Connectez-vous",
                   style: GoogleFonts.poppins(
                     fontSize: 14.sp,
                     color: const Color.fromARGB(255, 3, 190, 150),

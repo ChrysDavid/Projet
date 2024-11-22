@@ -63,7 +63,7 @@ class _TabBarExampleState extends State<forgot_pass>
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text(
-                    "Forgot your password?",
+                    "Mot de passe oublié ?",
                     style: GoogleFonts.poppins(
                       fontSize: 20.sp,
                       fontWeight: FontWeight.w600,
@@ -78,7 +78,7 @@ class _TabBarExampleState extends State<forgot_pass>
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text(
-                    "Enter your email or your phone number, we\nwill send you confirmation code",
+                    "Entrez votre email ou votre numéro de téléphone,\nnous vous enverrons un code de confirmation.",
                     style: GoogleFonts.poppins(
                         fontSize: 14.sp,
                         fontWeight: FontWeight.w400,
@@ -96,7 +96,6 @@ class _TabBarExampleState extends State<forgot_pass>
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 20),
                       child: Container(
-                        // height: 50,
                         width: MediaQuery.of(context).size.height,
                         decoration: BoxDecoration(
                           border: Border.all(
@@ -124,7 +123,7 @@ class _TabBarExampleState extends State<forgot_pass>
                                     text: "Email",
                                   ),
                                   Tab(
-                                    text: "Phone",
+                                    text: "Téléphone",
                                   ),
                                 ],
                               ),
@@ -139,7 +138,7 @@ class _TabBarExampleState extends State<forgot_pass>
                     Expanded(
                         child: TabBarView(
                             controller: tabController,
-                            children: [tab1(), tab2()]))
+                            children: [tab1(), tab2()])),
                   ],
                 ),
               ),

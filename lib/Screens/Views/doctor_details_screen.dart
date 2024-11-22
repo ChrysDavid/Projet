@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:medical/Screens/Views/appointment.dart';
-import 'package:medical/Screens/Views/find_doctor.dart';
 import 'package:medical/Screens/Widgets/date_select.dart';
 import 'package:medical/Screens/Widgets/doctorList.dart';
-import 'package:medical/Screens/Widgets/list_doctor1.dart';
 import 'package:medical/Screens/Widgets/time_select.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
@@ -42,7 +40,7 @@ class _DoctorDetailsState extends State<DoctorDetails> {
             ),
           ),
           title: Text(
-            "Top Doctors",
+            "Meilleurs Médecins",
             style: GoogleFonts.poppins(color: Colors.black, fontSize: 18.sp),
           ),
           centerTitle: true,
@@ -63,8 +61,6 @@ class _DoctorDetailsState extends State<DoctorDetails> {
           ],
           backgroundColor: Colors.white,
         ),
-        // ... Your existing code ...
-
         body: Stack(
           alignment: Alignment.bottomCenter,
           children: [
@@ -74,11 +70,11 @@ class _DoctorDetailsState extends State<DoctorDetails> {
                   height: 5,
                 ),
                 doctorList(
-                  distance: "800m away",
+                  distance: "800m de distance",
                   image: "lib/icons/male-doctor.png",
                   maintext: "Dr. Marcus Horizon",
                   numRating: "4.7",
-                  subtext: "Cardiologist",
+                  subtext: "Cardiologue",
                 ),
                 const SizedBox(
                   height: 15,
@@ -91,7 +87,7 @@ class _DoctorDetailsState extends State<DoctorDetails> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "About",
+                          "À propos",
                           style: GoogleFonts.poppins(
                               fontSize: 15.sp, fontWeight: FontWeight.w500),
                         ),
@@ -100,8 +96,8 @@ class _DoctorDetailsState extends State<DoctorDetails> {
                         ),
                         Text(
                           showExtendedText
-                              ? "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod elipss this is just a dummy text with some free lines do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam consectetur adipiscing elit. Sed euismod ..."
-                              : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod elipss this is just a dummy text with some free ... ",
+                              ? "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod elipss ceci est un texte factice avec quelques lignes supplémentaires..."
+                              : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod elipss ceci est un texte factice court...",
                           style: GoogleFonts.poppins(
                             color: const Color.fromARGB(255, 37, 37, 37),
                             fontSize: 14.sp,
@@ -111,12 +107,9 @@ class _DoctorDetailsState extends State<DoctorDetails> {
                           height: 5,
                         ),
                         Text(
-                          showExtendedText ? "Read less" : "Read more",
+                          showExtendedText ? "Lire moins" : "Lire plus",
                           style: TextStyle(
-                            color: showExtendedText
-                                ? Color.fromARGB(255, 1, 128, 111)
-                                : Color.fromARGB(255, 1, 128,
-                                    111), // Change color based on visibility
+                            color: const Color.fromARGB(255, 1, 128, 111),
                           ),
                         ),
                       ],
@@ -135,14 +128,14 @@ class _DoctorDetailsState extends State<DoctorDetails> {
                       physics: BouncingScrollPhysics(),
                       scrollDirection: Axis.horizontal,
                       children: [
-                        date_Select(date: "21", maintext: "Mon"),
-                        date_Select(date: "22", maintext: "Tue"),
-                        date_Select(date: "23", maintext: "Wed"),
-                        date_Select(date: "24", maintext: "Thu"),
-                        date_Select(date: "25", maintext: "Fri"),
-                        date_Select(date: "26", maintext: "Sat"),
-                        date_Select(date: "27", maintext: "Sun"),
-                        date_Select(date: "28", maintext: "Mon"),
+                        date_Select(date: "21", maintext: "Lun"),
+                        date_Select(date: "22", maintext: "Mar"),
+                        date_Select(date: "23", maintext: "Mer"),
+                        date_Select(date: "24", maintext: "Jeu"),
+                        date_Select(date: "25", maintext: "Ven"),
+                        date_Select(date: "26", maintext: "Sam"),
+                        date_Select(date: "27", maintext: "Dim"),
+                        date_Select(date: "28", maintext: "Lun"),
                       ],
                     ),
                   ),
@@ -160,24 +153,22 @@ class _DoctorDetailsState extends State<DoctorDetails> {
                 const SizedBox(
                   height: 20,
                 ),
-                //Time select container importing widget from widgets/times_select
                 Container(
                   height: MediaQuery.of(context).size.height * 0.2400,
                   width: MediaQuery.of(context).size.width * 0.9,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      //In main container 2 Columns use
                       Container(
                         height: MediaQuery.of(context).size.height * 0.2500,
                         width: MediaQuery.of(context).size.width * 0.2900,
                         child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              time_select(mainText: "09:00 AM"),
-                              time_select(mainText: "01:00 AM"),
-                              time_select(mainText: "04:00 AM"),
-                              time_select(mainText: "07:00 AM"),
+                              time_select(mainText: "09:00"),
+                              time_select(mainText: "01:00"),
+                              time_select(mainText: "04:00"),
+                              time_select(mainText: "07:00"),
                             ]),
                       ),
                       SizedBox(
@@ -189,10 +180,10 @@ class _DoctorDetailsState extends State<DoctorDetails> {
                         child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              time_select(mainText: "10:00 PM"),
-                              time_select(mainText: "02:00 PM"),
-                              time_select(mainText: "07:00 PM"),
-                              time_select(mainText: "09:00 PM"),
+                              time_select(mainText: "10:00"),
+                              time_select(mainText: "02:00"),
+                              time_select(mainText: "07:00"),
+                              time_select(mainText: "09:00"),
                             ]),
                       ),
                       SizedBox(
@@ -204,10 +195,10 @@ class _DoctorDetailsState extends State<DoctorDetails> {
                         child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              time_select(mainText: "11:00 AM"),
-                              time_select(mainText: "03:00 PM"),
-                              time_select(mainText: "08:00 PM"),
-                              time_select(mainText: "10:00 AM"),
+                              time_select(mainText: "11:00"),
+                              time_select(mainText: "03:00"),
+                              time_select(mainText: "08:00"),
+                              time_select(mainText: "10:00"),
                             ]),
                       ),
                     ],
@@ -256,7 +247,7 @@ class _DoctorDetailsState extends State<DoctorDetails> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  "Book Appointment",
+                                  "Prendre Rendez-vous",
                                   style: GoogleFonts.poppins(
                                       fontSize: 15.sp,
                                       color: Colors.white,

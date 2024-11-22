@@ -1,12 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:medical/Screens/Views/shedule_tab1.dart';
 import 'package:medical/Screens/Views/shedule_tab2.dart';
 import 'package:medical/Screens/Widgets/TabbarPages/message_tab_all.dart';
-import 'package:medical/Screens/Widgets/TabbarPages/tab1.dart';
-import 'package:medical/Screens/Widgets/TabbarPages/tab2.dart';
-import 'package:medical/Screens/Login-Signup/login.dart';
-import 'package:page_transition/page_transition.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 class message_screen extends StatefulWidget {
@@ -38,7 +33,7 @@ class _TabBarExampleState extends State<message_screen>
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text(
-          "Top Doctors",
+          "Meilleurs Docteurs",
           style: GoogleFonts.poppins(color: Colors.black, fontSize: 18.sp),
         ),
         centerTitle: false,
@@ -97,13 +92,13 @@ class _TabBarExampleState extends State<message_screen>
                                 controller: tabController,
                                 tabs: const [
                                   Tab(
-                                    text: "Upcoming",
+                                    text: "À venir",
                                   ),
                                   Tab(
-                                    text: "Completed",
+                                    text: "Terminé",
                                   ),
                                   Tab(
-                                    text: "Cancel",
+                                    text: "Annulé",
                                   ),
                                 ],
                               ),

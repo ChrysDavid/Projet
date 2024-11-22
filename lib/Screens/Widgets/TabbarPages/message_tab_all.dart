@@ -1,11 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:medical/Screens/Views/chat_screen.dart';
-import 'package:medical/Screens/Views/shedule_tab1.dart';
-import 'package:medical/Screens/Views/shedule_tab2.dart';
-import 'package:medical/Screens/Widgets/TabbarPages/tab1.dart';
-import 'package:medical/Screens/Widgets/TabbarPages/tab2.dart';
-import 'package:medical/Screens/Login-Signup/login.dart';
 import 'package:medical/Screens/Widgets/message_all_widget.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';

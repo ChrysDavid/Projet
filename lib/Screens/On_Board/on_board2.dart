@@ -46,7 +46,7 @@ class on_board2 extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(25),
                   child: Text(
-                    "Find a lot of specialist\ndoctors in one place",
+                    "Trouvez de nombreux médecins\nspécialistes au même endroit",
                     style: GoogleFonts.inter(
                         fontSize: 18.sp,
                         fontWeight: FontWeight.bold,

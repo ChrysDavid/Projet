@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:medical/Screens/Views/doctor_details_screen.dart';
-import 'package:medical/Screens/Views/find_doctor.dart';
 import 'package:medical/Screens/Widgets/doctorList.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
@@ -31,7 +30,7 @@ class appointment extends StatelessWidget {
           ),
         ),
         title: Text(
-          "Top Doctors",
+          "Meilleurs Médecins",
           style: GoogleFonts.poppins(color: Colors.black, fontSize: 18.sp),
         ),
         centerTitle: true,
@@ -60,11 +59,11 @@ class appointment extends StatelessWidget {
                 height: 5,
               ),
               doctorList(
-                distance: "800m away",
+                distance: "800m de distance",
                 image: "lib/icons/male-doctor.png",
                 maintext: "Dr. Marcus Horizon",
                 numRating: "4.7",
-                subtext: "Cardiologist",
+                subtext: "Cardiologue",
               ),
               const SizedBox(
                 height: 10,
@@ -83,7 +82,7 @@ class appointment extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      "Change",
+                      "Modifier",
                       style: GoogleFonts.inter(
                           fontSize: 14.sp,
                           fontWeight: FontWeight.w500,
@@ -118,7 +117,7 @@ class appointment extends StatelessWidget {
                     ),
                     Expanded(
                       child: Text(
-                        "Wednesday, Jun 23, 2021 | 10:00 AM",
+                        "Mercredi, 23 Juin 2021 | 10:00 AM",
                         style: GoogleFonts.poppins(
                             fontSize: 16.sp,
                             fontWeight: FontWeight.w500,
@@ -137,7 +136,7 @@ class appointment extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      "Reasion",
+                      "Raison",
                       style: GoogleFonts.inter(
                         fontSize: 16.sp,
                         fontWeight: FontWeight.w600,
@@ -145,7 +144,7 @@ class appointment extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      "Change",
+                      "Modifier",
                       style: GoogleFonts.inter(
                           fontSize: 14.sp,
                           fontWeight: FontWeight.w500,
@@ -188,7 +187,7 @@ class appointment extends StatelessWidget {
                       width: 10,
                     ),
                     Text(
-                      "Chest pain",
+                      "Douleur thoracique",
                       style: GoogleFonts.poppins(
                           fontSize: 16.sp,
                           fontWeight: FontWeight.w500,
@@ -214,7 +213,7 @@ class appointment extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 20),
                     child: Text(
-                      "Payment Details",
+                      "Détails du paiement",
                       style: GoogleFonts.poppins(
                           fontSize: 16.sp,
                           fontWeight: FontWeight.w600,
@@ -254,7 +253,7 @@ class appointment extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      "Admin Fee",
+                      "Frais Administratifs",
                       style: GoogleFonts.poppins(
                           fontSize: 15.sp, color: Colors.black54),
                     ),
@@ -276,7 +275,7 @@ class appointment extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      "Aditional Discount",
+                      "Réduction Additionnelle",
                       style: GoogleFonts.poppins(
                           fontSize: 15.sp, color: Colors.black54),
                     ),
@@ -331,7 +330,7 @@ class appointment extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Text("Payment Method"),
+                    Text("Mode de paiement"),
                   ],
                 ),
               ),
@@ -361,7 +360,7 @@ class appointment extends StatelessWidget {
                               color: Color.fromARGB(255, 38, 39, 117)),
                         ),
                         Text(
-                          "Change",
+                          "Modifier",
                           style: GoogleFonts.inter(
                               fontSize: 14.sp,
                               fontWeight: FontWeight.w500,
@@ -426,7 +425,7 @@ class appointment extends StatelessWidget {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Text(
-                                    "Book",
+                                    "Réserver",
                                     style: GoogleFonts.poppins(
                                         fontSize: 15.sp,
                                         color: Colors.white,

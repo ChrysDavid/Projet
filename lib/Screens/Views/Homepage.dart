@@ -24,7 +24,7 @@ class _HomepageState extends State<Homepage> {
   int page = 0;
 
   List<Widget> pages = [
-    Dashboard(), // You can replace this with your actual pages
+    Dashboard(),
     message_tab_all(),
     shedule_screen(),
     CarnerPage(),
@@ -35,7 +35,7 @@ class _HomepageState extends State<Homepage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: pages[page], // Display the selected page
+      body: pages[page],
       bottomNavigationBar: AnimatedBottomNavigationBar(
         icons: icons,
         iconSize: 20,
@@ -47,7 +47,7 @@ class _HomepageState extends State<Homepage> {
         inactiveColor: const Color.fromARGB(255, 223, 219, 219),
         onTap: (int tappedIndex) {
           setState(() {
-            page = tappedIndex; // Update the selected page
+            page = tappedIndex;
           });
         },
       ),

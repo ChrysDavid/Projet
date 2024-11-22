@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_chat_ui/flutter_chat_ui.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:medical/Screens/Views/Homepage.dart';
-import 'package:medical/Screens/Widgets/Auth_text_field.dart';
 import 'package:medical/Screens/Widgets/chat_doctor.dart';
 import 'package:medical/Screens/Widgets/chat_info.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:flutter_chat_types/flutter_chat_types.dart' as types;
 
 class chat_screen extends StatelessWidget {
   const chat_screen({super.key});
@@ -107,7 +104,7 @@ class chat_screen extends StatelessWidget {
                 const SizedBox(
                   height: 15,
                 ),
-                // Container for user's introductory message
+                // Container for doctor's introductory message
                 Container(
                   height: MediaQuery.of(context).size.height * 0.03,
                   width: MediaQuery.of(context).size.width * 0.4500,
@@ -123,7 +120,7 @@ class chat_screen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          "Hello. how can i help you?",
+                          "Bonjour. Comment puis-je vous aider ?",
                           style: TextStyle(fontSize: 15.sp),
                         )
                       ]),
@@ -156,84 +153,9 @@ class chat_screen extends StatelessWidget {
                                 padding: EdgeInsets.all(8.0),
                                 // User's message content
                                 child: Text(
-                                  "I have suffering from headache and cold for 3 days, I took 2 tablets of dolo,\nbut still pain",
+                                  "Je souffre de maux de tête et de rhume depuis 3 jours. J'ai pris 2 comprimés de dolo,\nmais la douleur persiste.",
                                   style: TextStyle(
                                       fontSize: 14.sp, color: Colors.white),
-                                ),
-                              ),
-                            ),
-                            Container(
-                              height: MediaQuery.of(context).size.height * 0.02,
-                              width: MediaQuery.of(context).size.width * 0.05,
-                              decoration: const BoxDecoration(
-                                  image: DecorationImage(
-                                      image: AssetImage("lib/icons/ticks.png"),
-                                      filterQuality: FilterQuality.high)),
-                            )
-                          ]),
-                    ),
-                  ],
-                ),
-                const SizedBox(
-                  height: 30,
-                ),
-                // Widget to display doctor's information
-                const chat_doctor(),
-                const SizedBox(
-                  height: 15,
-                ),
-                // Container for user's introductory message
-                Container(
-                  height: MediaQuery.of(context).size.height * 0.03,
-                  width: MediaQuery.of(context).size.width * 0.4500,
-                  decoration: const BoxDecoration(
-                    color: Color.fromARGB(255, 236, 232, 232),
-                    borderRadius: BorderRadius.only(
-                      topRight: Radius.circular(10),
-                      bottomLeft: Radius.circular(10),
-                      bottomRight: Radius.circular(10),
-                    ),
-                  ),
-                  child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          "Hello. how can i help you?",
-                          style: TextStyle(fontSize: 14.sp),
-                        )
-                      ]),
-                ),
-                const SizedBox(
-                  height: 15,
-                ),
-                // Container for user's message
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Container(
-                      height: MediaQuery.of(context).size.height * 0.09,
-                      width: MediaQuery.of(context).size.width * 0.5,
-                      decoration: const BoxDecoration(
-                        color: Color.fromARGB(255, 0, 131, 113),
-                        borderRadius: BorderRadius.only(
-                          topRight: Radius.circular(0),
-                          topLeft: Radius.circular(10),
-                          bottomLeft: Radius.circular(10),
-                          bottomRight: Radius.circular(10),
-                        ),
-                      ),
-                      child: Column(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          crossAxisAlignment: CrossAxisAlignment.end,
-                          children: [
-                            Expanded(
-                              child: Padding(
-                                padding: EdgeInsets.all(8.0),
-                                // User's message content
-                                child: Text(
-                                  "I have suffering from headache and cold for 3 days, I took 2 tablets of dolo,\nbut still pain",
-                                  style: TextStyle(
-                                      color: Colors.white, fontSize: 13.sp),
                                 ),
                               ),
                             ),
@@ -282,7 +204,7 @@ class chat_screen extends StatelessWidget {
                           ),
                         ),
                         prefixIconColor: const Color.fromARGB(255, 3, 190, 150),
-                        label: Text("Type message ..."),
+                        label: Text("Écrire un message ..."),
                         floatingLabelBehavior: FloatingLabelBehavior.never,
                         border: OutlineInputBorder(
                           borderSide: BorderSide.none,

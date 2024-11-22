@@ -1,13 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:medical/Screens/Views/Dashboard_screen.dart';
 import 'package:medical/Screens/Views/Homepage.dart';
 import 'package:medical/Screens/Widgets/article.dart';
-import 'package:medical/Screens/Widgets/doctorList.dart';
-import 'package:medical/Screens/Widgets/listIcons.dart';
-import 'package:medical/Screens/Login-Signup/login_signup.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:responsive_sizer/responsive_sizer.dart';
 
 class articlePage extends StatelessWidget {
   const articlePage({super.key});
@@ -78,7 +73,7 @@ class articlePage extends StatelessWidget {
                     ),
                   ),
                   prefixIconColor: const Color.fromARGB(255, 3, 190, 150),
-                  label: Text("Search doctor, drugs, articles..."),
+                  label: Text("Rechercher un médecin, des médicaments, des articles..."),
                   floatingLabelBehavior: FloatingLabelBehavior.never,
                   border: OutlineInputBorder(
                     borderSide: BorderSide.none,
@@ -96,7 +91,7 @@ class articlePage extends StatelessWidget {
             child: Row(
               children: [
                 Text(
-                  "Popular Articles",
+                  "Articles Populaires",
                   style: GoogleFonts.poppins(
                     fontSize: 18,
                     fontWeight: FontWeight.w500,
@@ -151,7 +146,7 @@ class articlePage extends StatelessWidget {
                       ),
                       child: Center(
                           child: Text(
-                        "Diet",
+                        "Régime",
                         style: GoogleFonts.poppins(
                             fontSize: 15,
                             fontWeight: FontWeight.w600,
@@ -173,7 +168,7 @@ class articlePage extends StatelessWidget {
                       ),
                       child: Center(
                           child: Text(
-                        "Fitness",
+                        "Condition Physique",
                         style: GoogleFonts.poppins(
                             fontSize: 15,
                             fontWeight: FontWeight.w600,
@@ -198,7 +193,7 @@ class articlePage extends StatelessWidget {
                       ),
                       child: Center(
                           child: Text(
-                        "Medicines",
+                        "Médicaments",
                         style: GoogleFonts.poppins(
                             fontSize: 15,
                             fontWeight: FontWeight.w600,
@@ -214,13 +209,12 @@ class articlePage extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          //TRENDING ARTICLE START FROM HERE
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 20),
             child: Row(
               children: [
                 Text(
-                  "Trending Article",
+                  "Article Tendance",
                   style: GoogleFonts.poppins(
                     fontSize: 18,
                     fontWeight: FontWeight.w500,
@@ -232,330 +226,12 @@ class articlePage extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          Row(
-            children: [
-              const SizedBox(
-                width: 20,
-              ),
-              Expanded(
-                child: Container(
-                  height: MediaQuery.of(context).size.height * 0.2500,
-                  width: MediaQuery.of(context).size.width * 0.4,
-                  child: ListView(scrollDirection: Axis.horizontal, children: [
-                    Container(
-                      height: MediaQuery.of(context).size.height * 0.2500,
-                      width: MediaQuery.of(context).size.width * 0.4,
-                      decoration: BoxDecoration(
-                          color: const Color.fromARGB(255, 255, 255, 255),
-                          borderRadius: const BorderRadius.all(
-                            Radius.circular(8),
-                          ),
-                          border: Border.all(color: Colors.black12)),
-                      child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.all(10),
-                              child: Container(
-                                height:
-                                    MediaQuery.of(context).size.height * 0.1000,
-                                width:
-                                    MediaQuery.of(context).size.width * 0.3500,
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(15),
-                                    image: const DecorationImage(
-                                        image: AssetImage(
-                                          "images/article1.png",
-                                        ),
-                                        filterQuality: FilterQuality.high,
-                                        fit: BoxFit.cover)),
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.symmetric(
-                                  horizontal: 10, vertical: 5),
-                              child: Container(
-                                height: MediaQuery.of(context).size.height *
-                                    0.01800,
-                                width:
-                                    MediaQuery.of(context).size.width * 0.1200,
-                                color: Color.fromARGB(255, 233, 231, 231),
-                                child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Text(
-                                        "Covid",
-                                        style: GoogleFonts.poppins(
-                                            fontSize: 10,
-                                            fontWeight: FontWeight.w500,
-                                            color: Color.fromARGB(
-                                                255, 6, 110, 102)),
-                                      ),
-                                    ]),
-                              ),
-                            ),
-                            Padding(
-                              padding:
-                                  const EdgeInsets.symmetric(horizontal: 15),
-                              child: Text(
-                                "Comparing the AstraZeneca and Sinovac COVID-19 Vaccines",
-                                style: GoogleFonts.inter(
-                                    fontSize: 13.sp,
-                                    fontWeight: FontWeight.w600,
-                                    color: Color.fromARGB(255, 0, 0, 0)),
-                              ),
-                            ),
-                            SizedBox(
-                              height: 15,
-                            ),
-                            Padding(
-                              padding:
-                                  const EdgeInsets.symmetric(horizontal: 15),
-                              child: Row(
-                                children: [
-                                  Text(
-                                    "Jun 10, 2021 ",
-                                    style: GoogleFonts.poppins(
-                                        fontSize: 11.sp,
-                                        fontWeight: FontWeight.w300),
-                                  ),
-                                  const SizedBox(
-                                    width: 10,
-                                  ),
-                                  Text(
-                                    "5min Read",
-                                    style: GoogleFonts.poppins(
-                                        fontSize: 11.sp,
-                                        color: Color.fromARGB(255, 0, 136, 102),
-                                        fontWeight: FontWeight.w500),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ]),
-                    ),
-                    SizedBox(
-                      width: 20,
-                    ),
-                    Container(
-                      height: MediaQuery.of(context).size.height * 0.2500,
-                      width: MediaQuery.of(context).size.width * 0.4,
-                      decoration: BoxDecoration(
-                          color: const Color.fromARGB(255, 255, 255, 255),
-                          borderRadius: const BorderRadius.all(
-                            Radius.circular(8),
-                          ),
-                          border: Border.all(color: Colors.black12)),
-                      child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.all(10),
-                              child: Container(
-                                height:
-                                    MediaQuery.of(context).size.height * 0.1000,
-                                width:
-                                    MediaQuery.of(context).size.width * 0.3500,
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(15),
-                                    image: const DecorationImage(
-                                        image: AssetImage(
-                                          "images/capsules.png",
-                                        ),
-                                        filterQuality: FilterQuality.high,
-                                        fit: BoxFit.cover)),
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.symmetric(
-                                  horizontal: 10, vertical: 5),
-                              child: Container(
-                                height: MediaQuery.of(context).size.height *
-                                    0.01800,
-                                width:
-                                    MediaQuery.of(context).size.width * 0.1200,
-                                color: Color.fromARGB(255, 233, 231, 231),
-                                child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Text(
-                                        "Covid",
-                                        style: GoogleFonts.poppins(
-                                            fontSize: 10,
-                                            fontWeight: FontWeight.w500,
-                                            color: Color.fromARGB(
-                                                255, 6, 110, 102)),
-                                      ),
-                                    ]),
-                              ),
-                            ),
-                            Padding(
-                              padding:
-                                  const EdgeInsets.symmetric(horizontal: 15),
-                              child: Text(
-                                "Comparing the AstraZeneca and Sinovac COVID-19 Vaccines",
-                                style: GoogleFonts.inter(
-                                    fontSize: 13.sp,
-                                    fontWeight: FontWeight.w600,
-                                    color: Color.fromARGB(255, 0, 0, 0)),
-                              ),
-                            ),
-                            SizedBox(
-                              height: 15,
-                            ),
-                            Padding(
-                              padding:
-                                  const EdgeInsets.symmetric(horizontal: 15),
-                              child: Row(
-                                children: [
-                                  Text(
-                                    "Jun 10, 2021 ",
-                                    style: GoogleFonts.poppins(
-                                        fontSize: 11.sp,
-                                        fontWeight: FontWeight.w300),
-                                  ),
-                                  const SizedBox(
-                                    width: 10,
-                                  ),
-                                  Text(
-                                    "5min Read",
-                                    style: GoogleFonts.poppins(
-                                        fontSize: 11.sp,
-                                        color: Color.fromARGB(255, 0, 136, 102),
-                                        fontWeight: FontWeight.w500),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ]),
-                    ),
-                    SizedBox(
-                      width: 15,
-                    ),
-                    Container(
-                      height: MediaQuery.of(context).size.height * 0.2500,
-                      width: MediaQuery.of(context).size.width * 0.4,
-                      decoration: BoxDecoration(
-                          color: const Color.fromARGB(255, 255, 255, 255),
-                          borderRadius: const BorderRadius.all(
-                            Radius.circular(8),
-                          ),
-                          border: Border.all(color: Colors.black12)),
-                      child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.all(10),
-                              child: Container(
-                                height:
-                                    MediaQuery.of(context).size.height * 0.1000,
-                                width:
-                                    MediaQuery.of(context).size.width * 0.3500,
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(15),
-                                    image: const DecorationImage(
-                                        image: AssetImage(
-                                          "images/capsules2.png",
-                                        ),
-                                        filterQuality: FilterQuality.high,
-                                        fit: BoxFit.cover)),
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.symmetric(
-                                  horizontal: 10, vertical: 5),
-                              child: Container(
-                                height: MediaQuery.of(context).size.height *
-                                    0.01800,
-                                width:
-                                    MediaQuery.of(context).size.width * 0.1200,
-                                color: Color.fromARGB(255, 233, 231, 231),
-                                child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Text(
-                                        "Covid",
-                                        style: GoogleFonts.poppins(
-                                            fontSize: 10,
-                                            fontWeight: FontWeight.w500,
-                                            color: Color.fromARGB(
-                                                255, 6, 110, 102)),
-                                      ),
-                                    ]),
-                              ),
-                            ),
-                            Padding(
-                              padding:
-                                  const EdgeInsets.symmetric(horizontal: 15),
-                              child: Text(
-                                "Comparing the AstraZeneca and Sinovac COVID-19 Vaccines",
-                                style: GoogleFonts.inter(
-                                    fontSize: 13.sp,
-                                    fontWeight: FontWeight.w600,
-                                    color: Color.fromARGB(255, 0, 0, 0)),
-                              ),
-                            ),
-                            SizedBox(
-                              height: 15,
-                            ),
-                            Padding(
-                              padding:
-                                  const EdgeInsets.symmetric(horizontal: 15),
-                              child: Row(
-                                children: [
-                                  Text(
-                                    "Jun 10, 2021 ",
-                                    style: GoogleFonts.poppins(
-                                        fontSize: 11.sp,
-                                        fontWeight: FontWeight.w300),
-                                  ),
-                                  const SizedBox(
-                                    width: 10,
-                                  ),
-                                  Text(
-                                    "5min Read",
-                                    style: GoogleFonts.poppins(
-                                        fontSize: 11.sp,
-                                        color: Color.fromARGB(255, 0, 136, 102),
-                                        fontWeight: FontWeight.w500),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ]),
-                    ),
-                  ]),
-                ),
-              ),
-            ],
-          ),
-          //Container End Here
-          const SizedBox(
-            height: 20,
-          ),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20),
-            child: Row(
-              children: [
-                Text(
-                  "Related Article",
-                  style: GoogleFonts.poppins(
-                    fontSize: 18,
-                    fontWeight: FontWeight.w500,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          const SizedBox(
-            height: 20,
-          ),
-          //Import this from widget
           Article(
               image: "images/article1.png",
-              dateText: "2 min Read",
-              duration: "2 min read",
-              mainText: "Main text"),
+              dateText: "10 juin 2021 ",
+              duration: "5 min de lecture",
+              mainText:
+                  "Comparaison des vaccins COVID-19 AstraZeneca et Sinovac"),
         ]),
       ),
     );

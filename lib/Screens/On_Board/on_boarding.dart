@@ -47,7 +47,7 @@ class _on_boardingState extends State<on_boarding> {
                     _controller.jumpToPage(2);
                   },
                   child: Text(
-                    "Skip",
+                    "Passer",
                     style: GoogleFonts.inter(fontSize: 15, color: Colors.grey),
                   )),
               SmoothPageIndicator(
@@ -82,7 +82,7 @@ class _on_boardingState extends State<on_boarding> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text(
-                                "Done ",
+                                "Terminé ",
                                 style: GoogleFonts.inter(
                                     fontSize: 16.sp,
                                     fontWeight: FontWeight.bold,
@@ -116,7 +116,7 @@ class _on_boardingState extends State<on_boarding> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text(
-                                "Next ",
+                                "Suivant ",
                                 style: GoogleFonts.inter(
                                     fontSize: 16.sp,
                                     fontWeight: FontWeight.bold,

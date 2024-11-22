@@ -46,11 +46,11 @@ class on_board3 extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(25),
                   child: Text(
-                    "Get connect our Online\nConsultation",
+                    "Connectez-vous à notre service\nconsultation en ligne",
                     style: GoogleFonts.inter(
                         fontSize: 18.sp,
                         fontWeight: FontWeight.bold,
-                        color: Color.fromARGB(255, 37, 37, 37)),
+                        color: const Color.fromARGB(255, 37, 37, 37)),
                   ),
                 ),
               )

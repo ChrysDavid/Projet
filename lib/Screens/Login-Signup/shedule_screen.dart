@@ -2,10 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:medical/Screens/Views/shedule_tab1.dart';
 import 'package:medical/Screens/Views/shedule_tab2.dart';
-import 'package:medical/Screens/Widgets/TabbarPages/tab1.dart';
-import 'package:medical/Screens/Widgets/TabbarPages/tab2.dart';
-import 'package:medical/Screens/Login-Signup/login.dart';
-import 'package:page_transition/page_transition.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 class shedule_screen extends StatefulWidget {
@@ -37,7 +33,7 @@ class _TabBarExampleState extends State<shedule_screen>
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text(
-          "Top Doctors",
+          "Top Médecins",
           style: GoogleFonts.poppins(color: Colors.black, fontSize: 18.sp),
         ),
         centerTitle: false,
@@ -61,7 +57,7 @@ class _TabBarExampleState extends State<shedule_screen>
       body: SingleChildScrollView(
         physics: NeverScrollableScrollPhysics(),
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 00),
+          padding: const EdgeInsets.symmetric(horizontal: 0),
           child: Column(
             children: [
               Container(
@@ -71,7 +67,6 @@ class _TabBarExampleState extends State<shedule_screen>
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 20),
                       child: Container(
-                        // height: 50,
                         width: MediaQuery.of(context).size.height,
                         decoration: BoxDecoration(
                           border: Border.all(
@@ -96,13 +91,13 @@ class _TabBarExampleState extends State<shedule_screen>
                                 controller: tabController,
                                 tabs: const [
                                   Tab(
-                                    text: "Upcoming",
+                                    text: "À venir",
                                   ),
                                   Tab(
-                                    text: "Completed",
+                                    text: "Terminé",
                                   ),
                                   Tab(
-                                    text: "Cancel",
+                                    text: "Annulé",
                                   ),
                                 ],
                               ),

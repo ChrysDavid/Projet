@@ -2,12 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:medical/Screens/Views/chat_ia_page.dart';
 import 'package:medical/Screens/Views/consutation_list.dart';
-import 'package:medical/Screens/Views/doctor_details_screen.dart';
 import 'package:medical/Screens/Views/doctor_search.dart';
 import 'package:medical/Screens/Views/find_doctor.dart';
 import 'package:medical/Screens/Widgets/article.dart';
 import 'package:medical/Screens/Widgets/banner.dart';
-import 'package:medical/Screens/Widgets/doctorList.dart';
 import 'package:medical/Screens/Widgets/list_doctor1.dart';
 import 'package:medical/Screens/Widgets/listicons.dart';
 import 'package:medical/Screens/Views/articlePage.dart';
@@ -43,7 +41,7 @@ class Dashboard extends StatelessWidget {
               height: 50,
             ),
             Text(
-              "Find your desire\nhealth solution",
+              "Trouvez votre solution\nsanté souhaitée",
               style: GoogleFonts.inter(
                   color: Color.fromARGB(255, 51, 47, 47),
                   fontSize: 20.sp,
@@ -100,7 +98,7 @@ class Dashboard extends StatelessWidget {
                     ),
                   ),
                   prefixIconColor: const Color.fromARGB(255, 3, 190, 150),
-                  label: Text("Search doctor, drugs, articles..."),
+                  label: Text("Recherchez un médecin, médicaments, articles..."),
                   floatingLabelBehavior: FloatingLabelBehavior.never,
                   border: OutlineInputBorder(
                     borderSide: BorderSide.none,
@@ -113,23 +111,22 @@ class Dashboard extends StatelessWidget {
           SizedBox(
             height: 20,
           ),
-          //Body Start fro here
+          //Body Start
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              listIcons(Icon: "lib/icons/Doctor.png", text: "Doctor"),
-              listIcons(Icon: "lib/icons/Pharmacy.png", text: "Pharmacy"),
-              listIcons(Icon: "lib/icons/Hospital.png", text: "Hospital"),
+              listIcons(Icon: "lib/icons/Doctor.png", text: "Médecin"),
+              listIcons(Icon: "lib/icons/Pharmacy.png", text: "Pharmacie"),
+              listIcons(Icon: "lib/icons/Hospital.png", text: "Hôpital"),
               listIcons(Icon: "lib/icons/Ambulance.png", text: "Ambulance"),
             ],
           ),
 
-          //List icons (Can Edit in Widgets )
           SizedBox(
             height: 10,
           ),
           BannerWidget(
-            title: "Early protection for\nyour family health",
+            title: "Protection précoce pour\nla santé de votre famille",
             image: "lib/icons/female.png",
             textButton: "Discuter avec l'IA",
             buttonLink: () {
@@ -144,9 +141,8 @@ class Dashboard extends StatelessWidget {
           SizedBox(
             height: 10,
           ),
-
           BannerWidget(
-            title: "Early protection for\nyour family health",
+            title: "Protection précoce pour\nla santé de votre famille",
             image: "lib/icons/female.png",
             textButton: "Consultation",
             buttonLink: () {
@@ -158,7 +154,6 @@ class Dashboard extends StatelessWidget {
               );
             },
           ),
-          // Banner Design
           const SizedBox(
             height: 20,
           ),
@@ -168,7 +163,7 @@ class Dashboard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  "Top Doctor",
+                  "Meilleurs médecins",
                   style: GoogleFonts.inter(
                     fontSize: 18.sp,
                     fontWeight: FontWeight.w700,
@@ -184,7 +179,7 @@ class Dashboard extends StatelessWidget {
                             child: doctor_search()));
                   },
                   child: Text(
-                    "See all",
+                    "Voir tout",
                     style: GoogleFonts.inter(
                       fontSize: 16.sp,
                       color: const Color.fromARGB(255, 3, 190, 150),
@@ -207,23 +202,23 @@ class Dashboard extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 children: [
                   list_doctor1(
-                      distance: "130m Away",
+                      distance: "130m de distance",
                       image: "lib/icons/male-doctor.png",
                       maintext: "Dr. Marcus Horizon",
                       numRating: "4.7",
-                      subtext: "Chardiologist"),
+                      subtext: "Cardiologue"),
                   list_doctor1(
-                      distance: "130m Away",
+                      distance: "130m de distance",
                       image: "lib/icons/docto3.png",
                       maintext: "Dr. Maria Elena",
                       numRating: "4.6",
-                      subtext: "Psychologist"),
+                      subtext: "Psychologue"),
                   list_doctor1(
-                      distance: "2km away",
+                      distance: "2km de distance",
                       image: "lib/icons/doctor2.png",
                       maintext: "Dr. Stevi Jessi",
                       numRating: "4.8",
-                      subtext: "Orthopedist"),
+                      subtext: "Orthopédiste"),
                 ],
               ),
             ),
@@ -237,7 +232,7 @@ class Dashboard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  "Health article",
+                  "Article santé",
                   style: GoogleFonts.inter(
                     fontSize: 18.sp,
                     fontWeight: FontWeight.w700,
@@ -253,7 +248,7 @@ class Dashboard extends StatelessWidget {
                             child: articlePage()));
                   },
                   child: Text(
-                    "See all",
+                    "Voir tout",
                     style: GoogleFonts.inter(
                       fontSize: 16.sp,
                       color: const Color.fromARGB(255, 3, 190, 150),
@@ -266,13 +261,12 @@ class Dashboard extends StatelessWidget {
           SizedBox(
             height: 10,
           ),
-          //Article banner here import from widget>article
           Article(
               image: "images/article1.png",
-              dateText: "Jun 10, 2021 ",
-              duration: "5min read",
+              dateText: "10 juin 2021",
+              duration: "5 min de lecture",
               mainText:
-                  "The 25 Healthiest Fruits You Can Eat,\nAccording to a Nutritionist"),
+                  "Les 25 fruits les plus sains que vous pouvez manger,\nselon un nutritionniste"),
         ]),
       ),
     );
